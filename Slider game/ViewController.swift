@@ -54,7 +54,6 @@ class ViewController: UIViewController {
             label.text = String(number)
             score.text = String(points)
         }
-
     }
 }
 
