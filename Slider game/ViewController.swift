@@ -17,9 +17,11 @@ class ViewController: UIViewController {
     var round: Int = 1
     var points: Int = 0
 
-    override func viewDidLoad() { //выполнится 1 раз за жизнь VC (сцены)
+    override func viewDidLoad() { // метод выполнится 1 раз за жизнь VC (сцены)
         super.viewDidLoad()
-//cюда перенести то, что загрузится только 1 раз
+        number = Int.random(in: 1...50)
+        label.text = String(number)
+        score.text = String(points)
     }
 
     @IBAction func checkNumber() {
