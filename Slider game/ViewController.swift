@@ -17,8 +17,16 @@ class ViewController: UIViewController {
     var round: Int = 1
     var points: Int = 0
 
+    lazy var secondVC: SecondViewController = getSecondVC()
+
+    override func loadView() {
+        super.loadView()
+        print("loadView")
+    }
+
     override func viewDidLoad() { // метод выполнится 1 раз за жизнь VC (сцены)
         super.viewDidLoad()
+        print("viewDidLoad")
         number = Int.random(in: 1...50)
         label.text = String(number)
         score.text = String(points)
@@ -49,7 +57,38 @@ class ViewController: UIViewController {
         number = Int.random(in: 1...50)
         label.text = String(number)
         score.text = String(points)
+    }
+    
+    @IBAction func aboutProgram() { //жмем и переходим на 2ой VC
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil) //если хотим каждый раз создавать заново (не дополнительный, а просто снова) VC
+//        let secondVC = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+        present(secondVC, animated: true, completion: nil)
+    }
 
+    private func getSecondVC() -> SecondViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc2nd = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+        return vc2nd as! SecondViewController
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidAppear")
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisappear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("viewDidDisappear")
     }
 }
+
 

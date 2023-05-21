@@ -54,6 +54,14 @@
                                     <action selector="checkNumber" destination="BYZ-38-t0r" eventType="touchUpInside" id="6g8-XZ-e61"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnE-Zj-zOh">
+                                <rect key="frame" x="698" y="362" width="134" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="About programm"/>
+                                <connections>
+                                    <action selector="aboutProgram" destination="BYZ-38-t0r" eventType="touchUpInside" id="xPY-Rp-Vs6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -66,6 +74,7 @@
                             <constraint firstItem="7Or-M0-EgN" firstAttribute="top" secondItem="j3B-a6-dTj" secondAttribute="bottom" constant="72" id="OIV-LG-DZy"/>
                             <constraint firstItem="7Or-M0-EgN" firstAttribute="top" secondItem="jgF-gn-qLl" secondAttribute="bottom" constant="72" id="QQj-9E-el2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Or-M0-EgN" secondAttribute="trailing" constant="20" id="T0b-mX-tgl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WnE-Zj-zOh" secondAttribute="trailing" constant="20" id="VYf-gb-vOr"/>
                             <constraint firstItem="jgF-gn-qLl" firstAttribute="leading" secondItem="f2c-6I-U7d" secondAttribute="trailing" constant="179" id="cHy-R2-23n"/>
                             <constraint firstItem="yuA-JH-EPM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fHD-wK-rk5"/>
                             <constraint firstItem="yuA-JH-EPM" firstAttribute="top" secondItem="7Or-M0-EgN" secondAttribute="bottom" constant="56" id="hhr-mh-hLH"/>
@@ -73,8 +82,10 @@
                             <constraint firstItem="elp-zN-Djh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="p8z-Id-UVq"/>
                             <constraint firstItem="7Or-M0-EgN" firstAttribute="top" secondItem="elp-zN-Djh" secondAttribute="bottom" constant="72" id="q4i-gY-L0V"/>
                             <constraint firstItem="f2c-6I-U7d" firstAttribute="leading" secondItem="elp-zN-Djh" secondAttribute="trailing" constant="13" id="tNZ-oS-qI1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WnE-Zj-zOh" secondAttribute="bottom" id="xdd-z4-4IQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ojw-Ud-sw9"/>
                     <connections>
                         <outlet property="label" destination="f2c-6I-U7d" id="byh-vy-rT8"/>
                         <outlet property="score" destination="j3B-a6-dTj" id="H5v-Mj-621"/>
@@ -83,7 +94,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383" y="-38"/>
+            <point key="canvasLocation" x="-453" y="42"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="2VI-cC-ffZ">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="LGu-eJ-oLF" customClass="SecondViewController" customModule="Slider_game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uoy-E6-dAX">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w03-hO-owM">
+                                <rect key="frame" x="409.5" y="191.5" width="77.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go back"/>
+                                <connections>
+                                    <action selector="getBack" destination="LGu-eJ-oLF" eventType="touchUpInside" id="6Pm-gg-kvB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zTH-pm-TUT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w03-hO-owM" firstAttribute="centerX" secondItem="uoy-E6-dAX" secondAttribute="centerX" id="Fy8-pv-SMa"/>
+                            <constraint firstItem="w03-hO-owM" firstAttribute="centerY" secondItem="uoy-E6-dAX" secondAttribute="centerY" id="G1E-wI-h4g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jgk-ff-5I3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QiJ-SB-E2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="770"/>
         </scene>
     </scenes>
     <resources>
