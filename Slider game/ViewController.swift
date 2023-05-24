@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func aboutProgram() { //жмем и переходим на 2ой VC
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil) //если хотим каждый раз создавать заново (не дополнительный, а просто снова) VC
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil) //если хотим каждый раз создавать VC заново (не дополнительный(не 2ой, 3ий, и т.д., а тот же, снова))
 //        let secondVC = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
         present(secondVC, animated: true, completion: nil)
     }
